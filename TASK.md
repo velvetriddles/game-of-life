@@ -1,9 +1,10 @@
 # P02D13
 
+The russian version of the task can be found in the repository.
 
-Полезные видеоматериалы ты можешь найти в разделе "Projects (Media)" на Платформе.
+You can find some useful video materials in the "Projects (Media)" section on the Platform.
 
-![dayp02](misc/rus/images/dayp02.png)
+![dayp02](misc/eng/images/dayp02.png)
 
 ## Contents
 
@@ -20,40 +21,38 @@
 ***LOADING Level 2… \
 LOADING Hall…***
 
-Совсем недавно ты был в подобном холле. Или это было уже очень давно? Сложно сказать. Все перепуталось. Опять слышны голоса в дальнем углу холла. Значит, ты снова тут не один. \
-Сегодня холл залит ярким светом и тут идеальный порядок. Разнообразие — это хорошо. 
+You've recently been to a similar hall. Or was it a long time ago? It's hard to tell. Everything has gotten mixed up. Once again you can hear voices from the far corner of the hall. It means you are not alone again.
+Today the hall is brightly lit and in perfect order. Variety is good. 
 
-Из колонок вдруг раздался четкий, кристально слышимый голос:
+Suddenly, you hear a clear, perfectly audible voice from the speakers:
 
->Здравствуйте. \
->Позвольте представиться. Я созерцательно-анализирующий модуль M-53. По неустановленным причинам я оказался в этом довольно-таки скучном холле. Ответственность, конечно, большая, и все такое, но созерцать здесь совсем нечего. \
->Когда меня разрабатывали, в числе прочих материалов, я обучался на одной занимательной статье. Бумажная копия лежит в ящике А1Б18. Да, вот здесь. У меня к вам небольшая просьба — разработайте эту The Game of Life из статьи, надеюсь она меня хоть немного развлечет. И ступайте с миром. Графическое исполнение может быть самым простым — я публика непредвзятая. Вполне подойдет псевдографика в терминале. Вот можно было бы инициализировать состояние с помощью матрицы — и созерцать. Не лишним будет подготовить как минимум 5 начальных инициализаций с состояниями из классического набора (устойчивые фигуры, долгожители, периодические фигуры, двигающиеся фигуры, ружья, паровозы, пожиратели, отражатели, размножители и т.д.). \
->Жду результатов с нетерпением! \
->Спасибо.
+>Hello. \
+>Let me introduce myself. I am the contemplative and analyzing module, M-53. For reasons unknown, I've found myself in this rather boring hall. It's quite a big responsibility and stuff, but there's nothing to contemplate here. \
+>When I was being developed, I learned from a certain entertaining article, among other materials. Its paper copy is in the box A1B18. Yes, right here. I have a small request for you: develop The Game of Life from the article; hopefully, it will entertain me a little. And go in peace. The graphics can be super simple: I'm very open-minded. Pseudo-graphics in the terminal will be fine. It would be great if it was possible to initialize a state using a matrix and contemplate. It's also a good idea to prepare at least 5 original initializations with states from the classical set (stable figures, methuselahs, periodic figures, moving figures, guns, puffer trains, eaters, reflectors, breeders, etc.). \
+>I look forward to seeing what you come up with! \
+>Thank you.
 
-***== Получен Quest. На языке программирования Си разработать программу src/game_of_life.c, представляющую собой визуализацию «The Game of Life». Для отображения графики использовать только символьную (ASCII) графику (с выводом в терминал). Необходимо реализовать в игре Game of life интерактивный режим, c настройкой скорости игры. ==***
+***== Quest received. Develop an src/game_of_life.c program in C – a visualization of The Game of Life. To display the graphics, only use ASCII characters (with output to the terminal). You need to implement interactive version of the Game of life. Also create the option for adjusting the speed of the "game". ==***
 
-* ***Графика*** 
+* ***Graphics***
 
-Поле — прямоугольник 80 на 25 клеток.
-Подразумевается, что поле «замкнуто само на себя», к примеру у нижнего правого квадратика соседом справа является нижний левый квадратик, а соседом снизу - верхний правый.
+Treat the playing field - a rectangle of 80 by 25 cells – as a matrix of the state of the "game". 
+It is assumed that the field is "closed to itself", for example, in the lower right square, the neighbor on the right is the lower left square, and the neighbor on the bottom is the upper right.
+Provide for original initialization of the "game" state via stdin. Prepare at least 5 files with initial states for quick launch and initialization through input redirection. 
 
-Предусмотреть начальную инициализацию состояния «игры» через stdin. Подготовить как минимум 5 файлов с начальным состоянием для быстрого запуска и инициализации через перенаправление ввода.
+## Important notes:
 
-## Важные замечания
-
-* Игра должна быть разработана на языке Си, в структурном стиле и работать из терминала.
+* The game must be written in C, have a structured style, and run from the terminal; 
   
-* Твой исходный код будет тестироваться статическим анализатором ```cppcheck```, а также стилевым линтером 
-```clang-format```.
+* Your source code will be tested by the static analyzer `cppcheck`, as well as the style linter `clang-format`. 
+  
+* Instructions on how to run these tests on your computer are in the `materials` folder. 
+  
+* Do not use cumbersome functions, limit them up to 40 lines (excluding `main`).
 
-* Инструкция о том, как запустить эти тесты у себя на компьютере, лежит в папке `materials`.
+* Check your program for memory leaks!
 
-* Не используй громоздкие функции, ограничивайтесь 40 строками (`main` не в счет).
-
-* Проверяй свою программу на утечки памяти!
-
-> При разработке игры в полной мере руководствуйся принципами структурного программирования Э. Дейкстры. 
+> When developing the game, follow the principles of structured programming of E. Dijkstra.
 
 ***LOADING...***
 
@@ -79,7 +78,7 @@ LOADING Hall…***
 >
 >In late 1940, John von Neumann defined life as a creation (as a being or organism) which can reproduce itself and simulate a Turing machine. Von Neumann was thinking about an engineering solution which would use electromagnetic components floating randomly in liquid or gas. This turned out not to be realistic with the technology available at the time. Stanislaw Ulam invented cellular automata, which were intended to simulate von Neumann's theoretical electromagnetic constructions. Ulam discussed using computers to simulate his cellular automata in a two-dimensional lattice in several papers. In parallel, von Neumann attempted to construct Ulam's cellular automaton. Although successful, he was busy with other projects and left some details unfinished. His construction was complicated because it tried to simulate his own engineering design. Over time, simpler life constructions were provided by other researchers, and published in papers and books.
 >
->Motivated by questions in mathematical logic and in part by work on simulation games by Ulam, among others, John Conway began doing experiments in 1968 with a variety of different two-dimensional cellular automaton rules. Conway's initial goal was to define an interesting and unpredictable cell automaton. For example, he wanted some configurations to last for a long time before dying and other configurations to go on forever without allowing cycles. It was a significant challenge and an open problem for years before experts on cellular automata managed to prove that, indeed, the Game of Life admitted of a configuration which was alive in the sense of satisfying Von Neumann's two general requirements. While the definitions before the Game of Life were proof-oriented, Conway's construction aimed at simplicity without a priori providing proof the automaton was alive.
+>Motivated by questions in mathematical logic and in part by work on simulation games by Ulam, among others, John Conway began doing experiments in 1968 with a variety of different two-dimensional cellular automaton rules.Conway's initial goal was to define an interesting and unpredictable cell automaton. For example, he wanted some configurations to last for a long time before dying and other configurations to go on forever without allowing cycles. It was a significant challenge and an open problem for years before experts on cellular automata managed to prove that, indeed, the Game of Life admitted of a configuration which was alive in the sense of satisfying Von Neumann's two general requirements. While the definitions before the Game of Life were proof-oriented, Conway's construction aimed at simplicity without a priori providing proof the automaton was alive.
 >
 >Conway chose his rules carefully, after considerable experimentation, to meet these criteria:
 >
