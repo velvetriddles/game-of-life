@@ -46,9 +46,11 @@ The Game of Life is a cellular automaton devised by the British mathematician Jo
 The program expects the initial configuration of the cells from the standard input. Cells are input as 0s and 1s, where 0 is a dead cell and 1 is a live cell.
 
 Example input:
+```
 0 1 0 0 0 0 1 0 0 0
 0 0 0 1 0 0 0 1 0 0
 1 1 1 0 0 0 0 0 1 1
+```
 ...
 
 
